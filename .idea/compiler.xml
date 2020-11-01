@@ -8,7 +8,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="剑指OFFER" />
+        <module name="OFFER" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="OFFER" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
