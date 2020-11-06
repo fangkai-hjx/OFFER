@@ -7,7 +7,7 @@ package Tree.common;
  *      /  \ / \
  *     4   5 6  7
  *    / \   /
- *   8   9  10
+ *   8   13  10
  *
  */
 public class TreeUtils {
@@ -25,7 +25,7 @@ public class TreeUtils {
         l1.left = l21;l1.right = l22;
         r1.left = r21;r1.right = r22;
         TreeNode l31 = new TreeNode(8);
-        TreeNode r31 = new TreeNode(9);
+        TreeNode r31 = new TreeNode(13);
         TreeNode l32 = new TreeNode(10);
         l21.left =l31;l21.right=r31;
         l22.left=null;l22.right=null;

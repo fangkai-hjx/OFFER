@@ -32,7 +32,7 @@ import java.util.List;
 public class PathSum {
     public static void main(String[] args) {
         TreeNode treeNode = TreeUtils.create();
-        List<List<Integer>> lists = pathSum(treeNode, 18);
+        List<List<Integer>> lists = pathSum(treeNode, 20);
     }
     public static List<List<Integer>> pathSum(TreeNode root, int sum) {
         List<List<Integer>> result = new ArrayList<>();
