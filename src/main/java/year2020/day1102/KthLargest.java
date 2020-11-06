@@ -33,22 +33,39 @@ import Tree.common.TreeUtils;
 public class KthLargest {
     public static void main(String[] args) {
         TreeNode treeNode = TreeUtils.create();
-        System.out.println(kthLargest(treeNode, 2));
+        System.out.println(KthNode(treeNode, 1).val);
     }
-    static int count, value ;
-    public static int kthLargest(TreeNode root, int k) {
+//    static int count, value ;
+//    public static int kthLargest(TreeNode root, int k) {
+//        count = k;
+//        postTravel(root);
+//        return value;
+//    }
+//    public static void postTravel(TreeNode treeNode){
+//        if(treeNode == null) return;
+//        postTravel(treeNode.right);
+//        if(--count == 0){
+//            value = treeNode.val;
+//            return;
+//        }
+//        postTravel(treeNode.left);
+//
+//    }
+    static TreeNode KthNode(TreeNode pRoot, int k)
+    {
         count = k;
-        postTravel(root);
-        return value;
+        travelTree(pRoot);
+        return result;
     }
-    public static void postTravel(TreeNode treeNode){
-        if(treeNode == null) return;
-        postTravel(treeNode.right);
-        if(--count == 0){
-            value = treeNode.val;
+    private static int count =0;
+    private static TreeNode result = null;
+    static void travelTree(TreeNode root){
+        if(root == null || count <=0) return;
+        travelTree(root.left);
+        if(--count == 0) {
+            result = root;
             return;
         }
-        postTravel(treeNode.left);
-
+        travelTree(root.right);
     }
 }
