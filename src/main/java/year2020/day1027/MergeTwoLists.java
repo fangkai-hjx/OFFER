@@ -33,7 +33,6 @@ public class MergeTwoLists {
         ListNode tail = head;//新链表的尾部
         ListNode first = l1;//第一条链表
         ListNode second = l2;//第二条链表
-        tail = head;
         while (first != null && second != null) {
             if(first.val <= second.val){
                 tail.next = first;
