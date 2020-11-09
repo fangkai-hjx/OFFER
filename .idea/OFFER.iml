@@ -6,6 +6,13 @@
         <fileset id="fileset" name="Fangkai" removed="false">
           <file>file://$MODULE_DIR$/src/main/resource/fangkai.xml</file>
         </fileset>
+        <fileset id="fileset2" name="Tx" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resource/tx.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resource/fangkai.xml</file>
+        </fileset>
+        <fileset id="fileset3" name="Bean" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resource/bean.xml</file>
+        </fileset>
       </configuration>
     </facet>
   </component>

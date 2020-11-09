@@ -5,6 +5,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test {
     public static void main(String[] args) {
-        AbstractApplicationContext ac = new ClassPathXmlApplicationContext("tx.xml");
+        AbstractApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
     }
 }
