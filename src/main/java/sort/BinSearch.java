@@ -1,4 +1,4 @@
-package Tree.BSearch;
+package sort;
 
 import java.util.Arrays;
 
@@ -74,4 +74,5 @@ public class BinSearch {
         // 视情况，是否需要单独判断 left（或者 right）这个下标的元素是否符合题意。
         return nums[left] == target ? left : -1;
     }
+
 }
