@@ -44,13 +44,13 @@ public class TheWay {
         if(str.length-1 == len){//最后一个节点了
             return true;
         }
-        //以下代码表示 该节点满足条件也就是str[len] = matix[index],但是未 完成全部路径
+        //以下代码表示 该节点满足条件也就是str[len] = matix[index],但是 未完成 全部路径
         //下一步要继续寻找路径（上下左右）
         //都不满足，下一步
         visited[index]=true;
         //len + 1 是 表示 下一个 字符
-        boolean b2 = isHasPath(matrix,rows,cols,str,visited,i-1,j,len+1);//向上
-        boolean b1 = isHasPath(matrix,rows,cols,str,visited,i+1,j,len+1);//向下
+        boolean b1 = isHasPath(matrix,rows,cols,str,visited,i-1,j,len+1);//向上
+        boolean b2 = isHasPath(matrix,rows,cols,str,visited,i+1,j,len+1);//向下
         boolean b3 = isHasPath(matrix,rows,cols,str,visited,i,j-1,len+1);//向左
         boolean b4 = isHasPath(matrix,rows,cols,str,visited,i,j+1,len+1);//向右
         if(b1 || b2 || b3|| b4) return true;
