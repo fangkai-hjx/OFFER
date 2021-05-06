@@ -18,6 +18,13 @@ func maxLength(arr []int) int {
 	//}
 	return 1
 }
+
+//func getMax(array []int, t int) int {
+//	i,m,j := 0,t,len(array)
+//	for ; i >0 && j < len(array) ; i++,j-- {
+//
+//	}
+//}
 func main() {
 	fmt.Println(maxLength([]int{2, 3, 4, 5}))
 	fmt.Println(maxLength([]int{2, 2, 3, 4, 3}))
