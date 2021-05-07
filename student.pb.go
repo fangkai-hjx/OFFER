@@ -24,12 +24,12 @@ const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
 // this is a comment
 type Student struct {
-	Name                 string   `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
-	Male                 bool     `protobuf:"varint,2,opt,name=male,proto3" json:"male,omitempty"`
-	Scores               []int32  `protobuf:"varint,3,rep,packed,name=scores,proto3" json:"scores,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	Name                 string   `protobuf:"bytes,1,opt,name=name,proto3" design:"name,omitempty"`
+	Male                 bool     `protobuf:"varint,2,opt,name=male,proto3" design:"male,omitempty"`
+	Scores               []int32  `protobuf:"varint,3,rep,packed,name=scores,proto3" design:"scores,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `design:"-"`
+	XXX_unrecognized     []byte   `design:"-"`
+	XXX_sizecache        int32    `design:"-"`
 }
 
 func (m *Student) Reset()         { *m = Student{} }

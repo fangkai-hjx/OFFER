@@ -1,0 +1,32 @@
+//protoc --go_out=./ *.proto
+//默认是版本2
+syntax = "proto3";
+package pb;
+option go_package ="./pb";
+// 指定所在包名
+// 定义一个消息体
+message Student{
+  int32  age = 1;//可以不从1开始，但是不能重复
+  string name = 2;
+  People p = 3;
+  repeated int32 score = 4;//数组
+  //枚举
+  //联合体
+  oneof data{
+    string teacher = 5;
+    string class = 6;
+  }
+}
+// 消息体支持嵌套
+message People{
+  int32  weight = 1;
+}
+enum Week{
+  Monday = 0;//枚举值必须从0开始
+  Turesday = 1;
+}
+// 添加服务
+service fk{
+  rpc Say(Student) returns (Student);
+}
+//注意，默认protobuf，编译期间，不编译服务
