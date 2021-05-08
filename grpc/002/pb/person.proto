@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option go_package ="./grpc/002/pb/";
+package pb;
+message Person{
+  string name =1;
+  int32 age = 2;
+}
+// 添加rpc服务
+service hello{
+  rpc sayHello(Person) returns(Person);
+}

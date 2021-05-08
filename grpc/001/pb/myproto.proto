@@ -2,7 +2,7 @@
 //默认是版本2
 syntax = "proto3";
 package pb;
-option go_package ="./pb";
+option go_package ="./grpc/pb/";
 // 指定所在包名
 // 定义一个消息体
 message Student{
